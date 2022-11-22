@@ -54,7 +54,7 @@ public class AudioClipAdjuster : EditorWindow {
         VisualElement root = rootVisualElement;
 
         // Import UXML.
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Scripts/Editor/AudioClipAdjuster.uxml");
+        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Packages/com.adamgryu.audioclipadjuster/Editor/AudioClipAdjuster.uxml");
         VisualElement labelFromUXML = visualTree.Instantiate();
         root.Add(labelFromUXML);
 
