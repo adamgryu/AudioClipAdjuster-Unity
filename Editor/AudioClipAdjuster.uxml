@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+        <ui:VisualElement style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-left-color: rgba(255, 255, 255, 0.17); border-right-color: rgba(255, 255, 255, 0.17); border-top-color: rgba(255, 255, 255, 0.17); border-bottom-color: rgba(255, 255, 255, 0.17); background-color: rgb(70, 70, 70); max-height: 100px; overflow: hidden;">
+            <ui:Label text="Label" display-tooltip-when-elided="true" name="Clips" />
+        </ui:VisualElement>
+        <ui:Slider picking-mode="Ignore" label="Pitch" value="1" high-value="2" name="PitchSlider" show-input-field="true" page-size="0" low-value="0.001" />
+        <ui:Slider picking-mode="Ignore" label="Tempo" value="1" high-value="2" name="TempoSlider" show-input-field="true" page-size="0" low-value="0.001" />
+        <ui:Slider picking-mode="Ignore" label="Volume" value="1" high-value="2" name="VolumeSlider" show-input-field="true" page-size="0" />
+        <ui:Button text="Adjust Clip" display-tooltip-when-elided="true" name="Adjust" focusable="true" style="height: 40px; -unity-text-align: middle-center; flex-grow: 0; flex-direction: column; white-space: nowrap;" />
+        <ui:VisualElement style="flex-direction: row; justify-content: center; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+            <ui:Button text="Overwrite Cached" display-tooltip-when-elided="true" name="Clear" style="-unity-text-align: middle-center; white-space: nowrap;" />
+            <ui:Button text="Restore Cached" display-tooltip-when-elided="true" name="Revert" style="visibility: visible;" />
+        </ui:VisualElement>
+        <ui:Foldout text="Advanced Settings" value="false" style="justify-content: flex-start; align-items: flex-start;">
+            <ui:TextField picking-mode="Ignore" label="FFMPEG Path" value="filler text" text="filler text" name="PathField" />
+            <ui:TextField picking-mode="Ignore" label="FFMPEG Arguments" value="filler text" text="filler text" name="ArgumentField" />
+            <ui:TextField picking-mode="Ignore" label="Advanced Arguments" value="filler text" text="filler text" name="AdvancedArgumentField" multiline="false" style="height: auto;" />
+            <ui:Button text="Restore Default Settings" display-tooltip-when-elided="true" name="DefaultSettings" />
+        </ui:Foldout>
+    </ui:VisualElement>
+</ui:UXML>
