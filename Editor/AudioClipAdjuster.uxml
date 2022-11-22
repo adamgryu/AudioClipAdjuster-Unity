@@ -3,9 +3,9 @@
         <ui:VisualElement style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; border-left-color: rgba(255, 255, 255, 0.17); border-right-color: rgba(255, 255, 255, 0.17); border-top-color: rgba(255, 255, 255, 0.17); border-bottom-color: rgba(255, 255, 255, 0.17); background-color: rgb(70, 70, 70); max-height: 100px; overflow: hidden;">
             <ui:Label text="Label" display-tooltip-when-elided="true" name="Clips" />
         </ui:VisualElement>
+        <ui:Slider picking-mode="Ignore" label="Volume" value="1" high-value="2" name="VolumeSlider" show-input-field="true" page-size="0" />
         <ui:Slider picking-mode="Ignore" label="Pitch" value="1" high-value="2" name="PitchSlider" show-input-field="true" page-size="0" low-value="0.001" />
         <ui:Slider picking-mode="Ignore" label="Tempo" value="1" high-value="2" name="TempoSlider" show-input-field="true" page-size="0" low-value="0.001" />
-        <ui:Slider picking-mode="Ignore" label="Volume" value="1" high-value="2" name="VolumeSlider" show-input-field="true" page-size="0" />
         <ui:Button text="Adjust Clip" display-tooltip-when-elided="true" name="Adjust" focusable="true" style="height: 40px; -unity-text-align: middle-center; flex-grow: 0; flex-direction: column; white-space: nowrap;" />
         <ui:VisualElement style="flex-direction: row; justify-content: center; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
             <ui:Button text="Overwrite Cached" display-tooltip-when-elided="true" name="Clear" style="-unity-text-align: middle-center; white-space: nowrap;" />

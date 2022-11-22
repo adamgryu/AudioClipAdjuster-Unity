@@ -11,9 +11,10 @@ using Object = UnityEngine.Object;
 
 public class AudioClipAdjuster : EditorWindow {
 
-    public const string DEFAULT_executablePath = "ffmpeg";
-    public const string DEFAULT_argumentString = "-y -i \"{0}\" -filter:a \"volume={2}\" \"{1}\"";
-    public const string DEFAULT_advancedArgString = "-y -i \"{0}\" -filter:a \"volume={2}, rubberband=tempo={4}:pitch={3}\" \"{1}\"";
+    private const string DEFAULT_executablePath = "ffmpeg";
+    private const string DEFAULT_argumentString = "-y -i \"{0}\" -filter:a \"volume={2}\" \"{1}\"";
+    private const string DEFAULT_advancedArgString = "-y -i \"{0}\" -filter:a \"volume={2}, rubberband=tempo={4}:pitch={3}\" \"{1}\"";
+    private const string UXML_GUID = "d246ffddb41c134419f4d0ec756f2e96";
 
     public static string executablePath = DEFAULT_executablePath;
     public static string argumentString = DEFAULT_argumentString;
@@ -54,7 +55,8 @@ public class AudioClipAdjuster : EditorWindow {
         VisualElement root = rootVisualElement;
 
         // Import UXML.
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Packages/com.adamgryu.audioclipadjuster/Editor/AudioClipAdjuster.uxml");
+        var uxmlPath = AssetDatabase.GUIDToAssetPath(UXML_GUID);
+        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(uxmlPath);
         VisualElement labelFromUXML = visualTree.Instantiate();
         root.Add(labelFromUXML);
 
