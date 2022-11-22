@@ -10,7 +10,7 @@ An extension for Unity that calls into [FFmpeg](https://ffmpeg.org/) to adjust a
 - Keeps the original clip in the `Temp` folder so it can be restored (as long as you don't close Unity). 
 
 ### Requirements
-You must have FFmpeg installed. It is a command line tool for converting and editing audio and video.
+You must have FFmpeg installed. It is a command line tool for converting and editing audio / video.
 
 ## Installation
 1. Ensure you have FFmpeg installed.
