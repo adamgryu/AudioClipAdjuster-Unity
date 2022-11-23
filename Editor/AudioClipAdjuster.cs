@@ -82,7 +82,7 @@ public class AudioClipAdjuster : EditorWindow {
     }
 
     private void UpdateClipsText() {
-        int count = GetSelectedClips().Count();
+        int count = GetSelectedClips(false).Count();
         adjustButton.text = count > 1 ? "Adjust Clips" : "Adjust Clip";
         adjustButton.SetEnabled(count > 0);
         revertButton.SetEnabled(count > 0);
@@ -227,9 +227,9 @@ public class AudioClipAdjuster : EditorWindow {
     /// <summary>
     /// Returns valid clip objects, including corrupted clips.
     /// </summary>
-    private static IEnumerable<Object> GetSelectedClips() {
+    private static IEnumerable<Object> GetSelectedClips(bool warnWhenEmpty = true) {
         var clips = Selection.objects.Where(obj => obj is AudioClip || obj is DefaultAsset);
-        if (!clips.Any()) {
+        if (!clips.Any() && warnWhenEmpty) {
             Debug.Log("No clip selected.");
         }
         return clips;
