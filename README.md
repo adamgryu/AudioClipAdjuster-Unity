@@ -16,7 +16,7 @@ You must have FFmpeg installed. It is a command line tool for converting and edi
 1. Ensure you have FFmpeg installed.
     - Run `ffmpeg` in the [command line](https://www.wikihow.com/Open-the-Command-Prompt-in-Windows) to see if it's already installed.
     - If not, download and unpack [FFmpeg](https://ffmpeg.org/download.html#build-windows) to your system.
-    - Ideally, add FFmpeg to your [PATH](https://medium.com/@kevinmarkvi/how-to-add-executables-to-your-path-in-windows-5ffa4ce61a53). If you skip this step, you'll have to manually point to FFmpeg in the Audio Clip Adjuster settings.
+    - Ideally, add FFmpeg to your [PATH](https://medium.com/@kevinmarkvi/how-to-add-executables-to-your-path-in-windows-5ffa4ce61a53). If you skip this step, you'll have to manually point to FFmpeg in the Audio Clip Adjuster settings. <details><summary>Expand to see where to type in the FFmpeg path.</summary>![ffmpegPath](https://user-images.githubusercontent.com/2540830/203445166-30a9941e-980d-4b86-b797-e57704539bbf.png)</details>
 2. Install Audio Clip Adjuster via the Unity Package Manager.
     - Open the Package Manager, press the `+` button, and select "Add package from git URL."
     - Copy in this URL: `https://github.com/adamgryu/AudioClipAdjuster-Unity.git`
