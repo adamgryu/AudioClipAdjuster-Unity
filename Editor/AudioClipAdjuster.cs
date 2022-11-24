@@ -31,6 +31,11 @@ public class AudioClipAdjuster : EditorWindow {
 
     private string projectFolder => Application.dataPath.Substring(0, Application.dataPath.Length - 7);
 
+    [MenuItem("Window/Audio/Audio Clip Adjuster")]
+    public static void OpenFromAudio() {
+        OpenWindow();
+    }
+
     [MenuItem("CONTEXT/AudioImporter/Edit Volume")]
     public static void OpenFromImporter() {
         OpenWindow();
